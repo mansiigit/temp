@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Combined Layout</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      background-color: #FDF5E6; 
+      display: flex;
+      flex-direction: column;
+    }
+
+    .yellow-div {
+      background-color: #FDF5E6;
+      position: relative;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .left-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .right-content {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .text-content {
+      white-space: pre-wrap;
+    }
+
+    .text-content h2 {
+      font-size: clamp(3rem, 8vw, 5em);
+      line-height: 1.2;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    .text-content h2 span:first-child {
+      color: #000;
+    }
+
+    .text-content h2 span:last-child {
+      color: #f00;
+    }
+
+    .image {
+      width: 90%; 
+      height: auto;
+      max-width: 100%; 
+      object-fit: contain; 
+      margin-left: -20%; 
+    }
+
+    .button {
+      background-color: #F9B116;
+      color: black;
+      padding: 20px 40px;
+      font-size: inherit;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .top-left-icon {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      padding: 5px;
+    }
+
+    .top-left-icon img {
+      width: 20px; 
+      height: auto;
+    }
+
+    .dark-blue-div {
+      background-color: #1F2D54; 
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px; 
+      
+    }
+
+    .dark-blue-div img {
+      max-width: 20%; 
+      height: auto;
+    }
+
+    .new-div {
+      background-color: #ccc;
+      padding: 40px; 
+      text-align: center;
+    }
+
+    .container-three-boxes-wrapper {
+      background-color: #FDF5E6; 
+      padding: 40px; 
+    }
+
+    .container-three-boxes {
+      display: flex;
+      justify-content: space-between;
+      width: 70%; 
+      margin: 0 auto; 
+      border-radius: 10px; 
+      overflow: hidden; 
+      position: relative; 
+    }
+
+    .container-three-boxes::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #000;
+    }
+
+    .box + .box {
+      margin-left: 40px; 
+    }
+
+    .box .icon {
+      position: absolute;
+      top: -20px;
+      left: 20px; 
+    }
+
+    .box .icon img {
+      width: 50px;
+      height: auto;
+    }
+
+    .box {
+      background-color: #F9B116; 
+      padding: 15px; 
+      border-radius: 20px; 
+      width: 220px; 
+      height: 220px; 
+      position: relative;
+      border: 2px solid #000;
+      box-shadow: 0 6px 12px rgba(3, 2, 2, 0.8); 
+    }
+
+    .box h3 {
+      margin-top: 15px; 
+      text-align: center;
+      font-size: 2rem; 
+    }
+
+    .box p {
+      margin-top: 10px; 
+      text-align: center;
+      font-size: 1rem; 
+      font-weight: bold; 
+    }
+    .expertise-section {
+      background-color: #1F2D54;
+      padding: 9px 35px; 
+      text-align: center;
+      display: flex; 
+      align-items: center; 
+      height: 500px;
+    }
+
+    .expertise-section img {
+      max-width: 60%; 
+      height: 500px; 
+      margin-left: 20%;
+    }
+
+    .expertise-left,
+    .expertise-right {
+      flex: 1; /* Equal width */
+    }
+
+    .expertise-left {
+      text-align: left; 
+    }
+
+    .expertise-right {
+  flex: 1; 
+  text-align: left; 
+  margin-left: 20%;
+  color: white;
+}
+
+.expertise-right p {
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.expertise-right p.special {
+  font-size: 2.5rem; 
+}
+
+
+
+
+    .expertise-item {
+      margin-bottom: 40px;
+    }
+
+    .expertise-item h3,
+    .expertise-item p {
+      font-weight: bold;
+    }
+    .new-div {
+  background-color:  #FDF5E6;
+  padding: 40px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem; 
+  margin-bottom: 20px;
+}
+
+.project-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-box {
+  flex: 1;
+  text-align: left;
+}
+
+.image-box {
+  flex: 0.5;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 15px; 
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+button {
+  display: block;
+  background-color:rgb(194, 116, 129);
+  color: #0d0d10;
+  padding: 15px 30px; 
+  text-decoration: none;
+  margin-top: 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  border: 2px solid #201f1c;
+  font-weight: bold; 
+}
+
+
+
+
+
+
+
+
+button {
+    display: block;
+    background-color: #C1597C;
+    color: #F9F9FA;
+    padding: 15px 30px; 
+    text-decoration: none;
+    margin-top: 20px;
+    border: 2px solid #E5CC99; 
+    border-radius: 5px;
+    font-weight: bold; 
+}
+
+.image-box {
+    width: 30%;
+    padding: 20px;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.image-box {
+  width: 30%; 
+  padding: 20px;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.text-box {
+  flex: 1;
+  text-align: left;
+  padding: 20px;
+}
+.contact-info-container {
+  background-color: #1F2D54;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%; 
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-info {
+  margin: 0 auto;
+}
+
+.info-line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.info-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.2;
+}
+.top-left-icon {
+  position: absolute;
+  top: 10px;
+  left: 5px; 
+  padding: 5px;
+}
+
+.top-left-icon img {
+  width: 80px; 
+  height: auto; 
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="yellow-div">
+      <a href="#" class="top-left-icon">
+        <img src="logo.png" alt="Logo">
+      </a>
+      <div class="left-content">
+        <div class="text-content">
+          <h2><span>GROW YOUR<br></span>BUSINESS<br>WITH US</h2>
+          <button class="button">Get Started</button>
+        </div>
+      </div>
+      <div class="right-content">
+        <img src="rightt.png" alt="Image Description" class="image">
+      </div>
+    </div>
+  </div>
+  <div class="dark-blue-div">
+    <img src="logo-2.png" alt="Photo 1">
+    <img src="logo-4.png" alt="Photo 2">
+    <img src="logo-5.png" alt="Photo 3">
+    <img src="logo-6.png" alt="Photo 4">
+    <img src="logo-7.png" alt="Photo 5">
+  </div>
+
+
+  <div class="container-three-boxes-wrapper">
+    <div class="container-three-boxes">
+      <div class="box">
+        <div class="icon">
+          <img src="icon1.png" alt="Icon 1">
+        </div>
+        <h3>Brand Solutions</h3>
+        <p>CCraft memorable brand
+          experiences that resonate
+          with your target audience
+          and blend with your
+          goals.</p>
+      </div>
+
+      <div class="box">
+        <div class="icon">
+          <img src="icon2.png" alt="Icon 2">
+        </div>
+        <h3>Print Media</h3>
+        <p>Transform ideas into captivating visiting cards, brochures, posters, stickers and more to spotlight your brand.</p>
+      </div>
+
+      <div class="box">
+        <div class="icon">
+          <img src="icon3.png" alt="Icon 3">
+        </div>
+        <h3>UI/UX Design</h3>
+        <p>Shape digital experiences with a UI/UX design that is both aesthetically pleasing and intuitive.</p>
+      </div>
+    </div>
+  </div>
+  <section class="expertise-section">
+    <div class="expertise-left">
+      <div class="icon">
+        <img src="WhatsApp Image 2024-04-25 at 17.28.30_4a941443.png" alt="Icon">
+      </div>
+    </div>
+    <div class="expertise-right">
+      <p class="special">5+ Years of Experience</p>
+      <p>We are industry-leading professionals dedicated to your success.</p>
+      <p class="special">86 Happy Clients</p>
+      <p>We provide innovative solutions tailored to your needs.</p>
+      <p class="special">32+ Business</p>
+      <p>We have a proven track record of delivering impactful outcomes.</p>
+    </div>
+    
+  </section>
+  <div class="new-div">
+    <h2>See Our Projects</h2>
+    <div class="project-details">
+      <div class="text-box">
+        <h3>DAINTY JEWELLERY</h3>
+        <p>Where every sparkle meets sophistication. We curated packaging designs and revamped the web layout for them to look as elegant as Dainty Jewellers’ offerings.</p>
+        <button>Get To Know More</button>
+      </div>
+      <div class="image-box">
+        <img src="d.jpg" alt="Dainty Jewellery">
+      </div>
+    </div>
+  </div>
+  
+      
+  <div class="new-div">
+  
+    <div class="project-details">
+      <div class="text-box">
+        <h3>DECAFE BREW</h3>
+        <p>Savour the flavour of creativity.
+          We brewed visiting cards, menus
+          and packaging designs that leave
+          a lasting impression with every
+          sip. .</p>
+        <button>Get To Know More</button>
+      </div>
+      <div class="image-box">
+        <img src="a.jpg" alt="Dainty Jewellery">
+      </div>
+    </div>
+  </div>
+  <div class="new-div">
+    
+    <div class="project-details">
+      <div class="text-box">
+        <h3>BINGE CORN</h3>
+        <p>Pop with Personality! From kernels of
+          creativity to a bushel of branding
+          brilliance, we seasoned every aspect
+          of Binge Corn's identity. We crafted
+          packaging designs that make the
+          product leap straight into consumers'
+          hands..  </p>
+        <button>Get To Know More</button>
+      </div>
+      <div class="image-box">
+        <img src="c.jpg" alt="Dainty Jewellery">
+      </div>
+    </div>
+  </div>
+  <footer class="contact-info-container">
+    <div class="contact-info">
+      <div class="info-line">
+        <div class="icon">&#9742;</div>
+        <p class="info-text">READY TO SIP ON SUCCESS?</p>
+      </div>
+      <div class="info-line">
+        <div class="icon">&#9990;</div>
+        <p class="info-text">We accept telepathy but a text would work better. Contact us now!</p>
+      </div>
+      <div class="info-line">
+        <div class="icon">&#9743;</div>
+        <p class="info-text">+65 83000562 / +91 9769652708</p>
+      </div>
+      <div class="info-line">
+        <div class="icon">&#9787;</div>
+        <p class="info-text">abdulhuseinjaibir@sociosip.com / lamiya@sociosip.com</p>
+      </div>
+      <div class="info-line">
+        <div class="icon">&#128205;</div>
+        <p class="info-text">⑨ Alexandra Rd, Singapore 159958</p>
+      </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
