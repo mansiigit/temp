@@ -8,6 +8,13 @@
 html {
   font-size: 62.5%;
 }
+.yellow-div {
+  background-color:  #fdf5e6 !important; /* Add !important to override other styles */
+}
+body {
+  background-color: #fdf5e6; /* Set the background color to #fdf5e6 */
+}
+
 
 * {
   margin: 0;
@@ -58,6 +65,7 @@ body {
 }
 
 .container {
+
   display: flex;
   flex-direction: column;
   align-items: center; /* Center align the child elements horizontally */
@@ -67,7 +75,7 @@ body {
 }
 
 .yellow-div {
-  background-color: whitesmoke;
+
   padding: 2rem;
   display: flex;
   justify-content: space-between; /* Distribute child elements evenly */
@@ -523,12 +531,20 @@ button {
   color: #fff;
   padding: 2rem; /* Reduced padding for all screens */
   border-radius: 1rem;
-  text-align: center;
   width: 100%;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+.info-line:first-child {
+  justify-content: center; /* Center align the first line horizontally */
+}
+
+.info-line:nth-child(2) {
+  margin-left: 5%; /* Adjust the left margin as needed */
+}
+
+.icon {
+  margin-left: 10%; /* Adjust the margin to align with the second paragraph */
 }
 
 .contact-info {
@@ -538,38 +554,72 @@ button {
 .info-line {
   display: flex;
   align-items: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem; /* Add some space between lines */
 }
 
-.icon {
-  margin-right: 1rem;
-}
-
-.dark-blue-div {
-  margin-bottom: 2rem;
-}
-
-.container-three-boxes-wrapper {
-  margin-top: 2rem; /* Adjust as needed */
-}
-
-.info-text {
-  margin: 0;
-  font-size: 1.8rem; /* Default font size for all screens */
-  line-height: 1.6;
-  text-align: justify;
+.info-text:first-child {
+  font-size: 3em; /* Increase font size for the first paragraph */
 }
 
 /* Media query for larger screens */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   .contact-info-container {
-    padding: 4rem; /* Adjusted padding for larger screens */
+    padding: 3rem; /* Adjusted padding for larger screens */
+  }
+
+  .info-line:nth-child(2) {
+    margin-left: 20%; /* Adjust the left margin for larger screens */
+  }
+
+  .icon {
+    margin-left: 25%; /* Adjust the margin for larger screens */
   }
 
   .info-text {
     font-size: 2.4rem; /* Increased font size for larger screens */
   }
 }
+
+/* Media query for medium screens */
+@media only screen and (max-width: 767px) {
+  .info-line:nth-child(2) {
+    margin-left: 5%; /* Adjust the left margin for medium screens */
+  }
+
+  .icon {
+    margin-left: 10%; /* Adjust the margin for medium screens */
+  }
+
+  .info-text {
+    font-size: 2rem; /* Reduced font size for medium screens */
+  }
+  
+  .info-text:nth-child(2) {
+    white-space: nowrap; /* Ensure second line stays on one line */
+  }
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 480px) {
+  .info-line:nth-child(2) {
+    margin-left: 5%; /* Adjust the left margin for smaller screens */
+  }
+
+  .icon {
+    margin-left: 10%; /* Adjust the margin for smaller screens */
+  }
+
+  .info-text {
+    font-size: 1.5rem; /* Reduced font size for smaller screens */
+  }
+  
+  .info-text:nth-child(2) {
+    white-space: nowrap; /* Ensure second line stays on one line */
+  }
+}
+
+
+
 
 
 
@@ -587,6 +637,23 @@ button {
 .reverse-middle .project-details {
   flex-direction: row-reverse; /* Reverse the order of flex items */
 }
+
+
+
+.info-line {
+  display: flex;
+  align-items: center;
+}
+
+.bigger-text {
+  font-size: 1.5em; /* Adjust the font size as needed */
+  margin: auto; /* Center the text horizontally */
+}
+
+.info-text {
+  margin-left: 6rem; /* Add left margin to the next line */
+}
+
 
 
 
@@ -720,26 +787,34 @@ button {
   <footer class="contact-info-container">
     <div class="contact-info">
       <div class="info-line">
-        <div class="icon">&#9742;</div>
+        
         <p class="info-text">READY TO SIP ON SUCCESS?</p>
       </div>
       <div class="info-line">
-        <div class="icon">&#9990;</div>
+      
         <p class="info-text">We accept telepathy but a text would work better. Contact us now!</p>
       </div>
       <div class="info-line">
-        <div class="icon">&#9743;</div>
+        <div class="icon">
+          <img src="phone-removebg-preview.png" alt="Icon Description" style="width: 30px; height: auto;">
+        </div>
         <p class="info-text">+65 83000562 / +91 9769652708</p>
       </div>
+      
       <div class="info-line">
-        <div class="icon">&#9787;</div>
+        <div class="icon">
+          <img src="mail-removebg-preview-removebg-preview.png" alt="Icon Description" style="width: 30px; height: auto;">
+        </div>
         <p class="info-text">abdulhuseinjabir@sociosip.com / lamiya@sociosip.com</p>
       </div>
+      
       <div class="info-line">
-        <div class="icon">&#128205;</div>
+        <div class="icon">
+          <img src="add-removebg-preview.png" alt="Icon Description" style="width: 30px; height: auto;">
+        </div>
         <p class="info-text">Alexandra Rd, Singapore 159958</p>
       </div>
-    </div>
+      
 </footer>
 
 
