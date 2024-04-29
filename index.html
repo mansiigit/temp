@@ -4,155 +4,125 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
-
   <title>Combined Layout</title>
   <style>
 html {
   font-size: 62.5%;
 }
 .top-left-icon {
-  position: absolute; /* Set position to absolute */
-  top: 0; /* Align to the top */
-  left: 0; /* Align to the left */
+  position: absolute;
+  top: 0;
+  left: 0;
   padding: 0.5rem;
 }
-
 .top-left-icon img {
   width: 8rem;
   height: auto;
 }
-
-
-
 .yellow-div {
-  background-color: #fdf5e6 !important; /* Add !important to override other styles */
+  background-color: #fdf5e6 !important;
 }
-
 body {
-  background-color: #fdf5e6; /* Set the background color to #fdf5e6 */
+  background-color: #fdf5e6;
 }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 .text-content img {
-  max-width: 100%; /* Ensure the button image resizes appropriately */
+  max-width: 100%;
   height: auto;
 }
-
 .left-content {
-  flex: 1; /* Take up remaining space */
-  padding: 0 2rem; /* Add horizontal padding */
+  flex: 1;
+  padding: 0 2rem;
 }
-
-
-
 @media (max-width: 768px) {
   .text-content h2 {
-    font-size: 2.5rem; /* Font size for smaller screens */
+    font-size: 2.5rem;
   }
 }
-
 @media (max-width: 99.8rem) {
   html {
     font-size: 55%;
   }
 }
-
 @media (max-width: 76.8rem) {
   html {
     font-size: 45%;
   }
 }
-
 body {
   margin: 0;
 }
-
 @media (min-width: 768px) {
   .top-left-icon {
     left: 2rem;
   }
 }
-
 h2 {
-  font-size: 6em; /* Default font size for small screens */
-  line-height: 1.5; /* Increase line height for spacing between lines */
+  font-size: 6em;
+  line-height: 1.5;
 }
-
 @media only screen and (min-width: 1024px) {
   .yellow-div h2 {
-    font-size: 8em !important; /* Increase font size for larger screens (twice as big) */
-    margin-bottom: 2rem; /* Add more bottom margin for spacing */
+    font-size: 8em !important;
+    margin-bottom: 2rem;
   }
 }
-
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center align the child elements horizontally */
-  max-width: 1200px; /* Set a maximum width for the container */
-  margin: 0 auto; /* Center the container horizontally */
-  padding: 0 2rem; /* Add padding to the sides */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
-
 .yellow-div {
   padding: 2rem;
   display: flex;
-  justify-content: space-between; /* Distribute child elements evenly */
-  align-items: center; /* Center align the child elements vertically */
-  width: 100%; /* Ensure the div takes up full width */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
-
 .right-content {
   flex: 1;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-
 .text-content {
   white-space: pre-wrap;
 }
-
 .text-content h2 {
   font-size: 4rem;
   font-family: 'Bebas Neue', sans-serif;
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
+  margin-bottom: 1rem;
+  line-height: 1.2;
   padding-left: 1rem;
-  letter-spacing: 0.3rem; /* Increase letter spacing */
+  letter-spacing: 0.5rem;
 }
-
-
-
-
-
+@media screen and (max-width: 768px) {
+  .text-content h2 {
+    padding-left: 0.7rem;
+  }
+}
 .right-content {
-  flex: 1; /* Take up all available space */
+  flex: 1;
 }
-
 .right-content .image {
-  width: 100%; /* Set the width to fill its container */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%;
+  height: auto;
 }
 @media (max-width: 768px) {
   .right-content .image {
-    width: 130%; /* Increase the width to make the image even bigger */
-    max-width: none; /* Remove the maximum width restriction */
-    margin-top: -11rem; /* Move the image further upwards by adjusting the top margin */
+    width: 130%;
+    max-width: none;
+    margin-top: -11rem;
     margin-left: 1;
   }
 }
-
-
-
-
-
-
 .button {
   background-color: #f9b116;
   color: black;
@@ -163,9 +133,6 @@ h2 {
   cursor: pointer;
   margin-top: 2rem;
 }
-
-
-
 .dark-blue-div {
   background-color: #1f2d54;
   display: flex;
@@ -173,47 +140,39 @@ h2 {
   align-items: center;
   padding: 1rem;
 }
-
 .dark-blue-div img {
   max-width: 20%;
   height: auto;
 }
-
 .new-div {
   background-color: #fdf5e6;
   padding: 4rem;
   text-align: center;
 }
-
 .project-details {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .text-box {
   flex: 1;
   text-align: left;
   padding: 2rem;
-  font-size: 2rem; /* Increased font size */
-  line-height: 1.5; /* Spacing between lines */
+  font-size: 2rem;
+  line-height: 1.5;
 }
-
 .image-box {
   flex: 1;
   padding: 2rem;
 }
-
 .image-box img {
   width: 100%;
   height: auto;
   border-radius: 0.5rem;
 }
-
 .button-container {
   margin-top: 2rem;
 }
-
 .button-container button {
   background-color: #fdf5e6;
   color: black;
@@ -222,250 +181,203 @@ h2 {
   border-radius: 0.5rem;
   cursor: pointer;
 }
-
 .reverse-middle .project-details {
-  flex-direction: row-reverse; /* Reverse the order of flex items */
+  flex-direction: row-reverse;
 }
-
 .new-div h2 {
-  font-size: 3.5rem; /* Adjust the font size as needed */
-  font-family: 'Lexend Bold', sans-serif; /* Set the font family to Lexend Bold */
+  font-size: 3.5rem;
+  font-family: 'Lexend Bold', sans-serif;
 }
-
 .container-three-boxes-wrapper {
   margin-top: 2rem;
 }
-
 .container-three-boxes {
   display: flex;
   justify-content: space-between;
   max-width: 120rem;
   margin: 0 auto;
-  padding: 0.5rem; /* Add padding to the entire container */
+  padding: 0.5rem;
 }
-
 .box {
-  flex: 1; /* Equal width for all boxes */
+  flex: 1;
   background-color: #f9b116;
-  padding: 6rem; /* Increase padding for larger boxes */
-  margin-right: 1rem; /* Adjust spacing between boxes */
+  padding: 6rem;
+  margin-right: 1rem;
   text-align: center;
   overflow: hidden;
-  border-radius: 1rem; /* Curve the corners of the boxes */
-  position: relative; /* Enable absolute positioning for icons */
-  border: 0.2rem solid black; /* Add a black border to each box */
+  border-radius: 1rem;
+  position: relative;
+  border: 0.2rem solid black;
   margin-bottom: 1rem;
 }
-
 .box:first-child {
-  margin-left: 1rem; /* Add space before the first box */
+  margin-left: 1rem;
 }
-
 .box:last-child {
-  margin-right: 1rem; /* Add space after the last box */
+  margin-right: 1rem;
 }
-
 .box h3 {
   margin-top: 2rem;
-  font-size: 3.5rem; /* Increase font size for larger screens */
-  font-family: 'Lexend Regular', sans-serif; /* Set font family for headings */
+  font-size: 3.5rem;
+  font-family: 'Lexend Regular', sans-serif;
 }
-
 .box p {
   margin-top: 1rem;
-  font-size: 2.2rem; /* Increase font size for larger screens */
+  font-size: 2.2rem;
   line-height: 1.6;
-  font-family: 'Lexend Light', sans-serif; /* Set font family for text */
+  font-family: 'Lexend Light', sans-serif;
 }
-
 .box .icon {
   top: 1rem;
   left: 50%;
   transform: translateX(-50%);
 }
-
 .box .icon img {
-  width: 3rem; /* Decrease the width of the icon */
-  height: auto; /* Maintain aspect ratio */
+  width: 3rem;
+  height: auto;
 }
-
 @media (max-width: 1024px) {
   .box {
-    padding: 2rem; /* Keep padding consistent for smaller screens */
+    padding: 2rem;
   }
-
   .box h3 {
-    font-size: 1.4rem; /* Keep font size consistent for smaller screens */
+    font-size: 1.4rem;
   }
-
   .box p {
-    font-size: 1.2rem; /* Keep font size consistent for smaller screens */
+    font-size: 1.2rem;
   }
-
   .box .icon {
-    top: -1rem; /* Adjust the position of the icon for smaller screens */
-    width: 2rem; /* Decrease the size of the icon for smaller screens */
+    top: -1rem;
+    width: 2rem;
   }
 }
-
 @media only screen and (min-width: 768px) {
   .box .icon img {
-    width: 6rem; /* Increase the width of the icon for larger screens */
+    width: 6rem;
   }
 }
-
 .expertise-section {
   background-color: #1f2d54;
   padding: 0.9rem 3.5rem;
   text-align: center;
   display: flex;
   align-items: center;
-  height: auto; /* Remove fixed height */
+  height: auto;
 }
-
 .expertise-section img {
-  max-width: 85%; /* Adjust the maximum width of the image for larger screens */
-  height: auto; /* Maintain aspect ratio */
-  margin-left: 10%; /* Adjust margin as needed */
+  max-width: 85%;
+  height: auto;
+  margin-left: 10%;
 }
-
 @media (max-width: 768px) {
   .expertise-section img {
-    max-width: 100%; /* Increase the maximum width of the image for smaller screens */
-    margin-left: 0; /* Reset margin */
+    max-width: 100%;
+    margin-left: 0;
   }
 }
-
 @media (min-width: 1024px) {
   .expertise-section img {
-    max-width: 90%; /* Keep the maximum width of the image for laptop screens */
-    margin-left: 7.5%; /* Adjust margin as needed */
+    max-width: 90%;
+    margin-left: 7.5%;
   }
 }
-
 .expertise-left,
 .expertise-right {
   flex: 1;
 }
-
 .expertise-left {
   text-align: left;
 }
-
 .expertise-right {
   flex: 1;
   text-align: left;
-  margin-left: 20%; /* Adjust margin as needed */
+  margin-left: 20%;
   color: white;
 }
-
 .expertise-right {
-  font-size: 2rem; /* Increased font size */
-  margin-right: 3rem; /* Move the text to the right */
+  font-size: 2rem;
+  margin-right: 3rem;
 }
-
 .expertise-right p {
   font-weight: bold;
-  font-size: 1.6rem; /* Default font size */
-  line-height: 1.8; /* Default line height */
+  font-size: 1.6rem;
+  line-height: 1.8;
 }
-
 .expertise-right p.special {
-  font-size: 2.5rem; /* Larger font size for special text */
+  font-size: 2.5rem;
 }
-
 @media (min-width: 1024px) {
   .expertise-right {
-    margin-left: 10%; /* Adjust margin for larger screens */
+    margin-left: 10%;
   }
-
   .expertise-right p {
-    font-size: 2.6rem; /* Increase font size for larger screens */
-    line-height: 2.2; /* Increase line height for larger screens */
-    max-width: 80%; /* Adjust max width for larger screens */
+    font-size: 2.6rem;
+    line-height: 2.2;
+    max-width: 80%;
   }
-
   .expertise-right p.special {
-    font-size: 3.5rem; /* Increase font size for larger screens */
+    font-size: 3.5rem;
   }
 }
-
 .expertise-right {
-  font-size: 1.6rem; /* Default font size */
+  font-size: 1.6rem;
 }
-
-/* Media query for larger screens */
 @media only screen and (min-width: 768px) {
   .expertise-right {
-    font-size: 2rem; /* Increased font size for larger screens */
+    font-size: 2rem;
   }
 }
-
 .expertise-item {
   margin-bottom: 4rem;
 }
-
 .new-div .text-box p {
   font-size: 1.8rem;
   line-height: 1.5;
 }
-
-/* Media query for larger screens */
 @media only screen and (min-width: 768px) {
   .new-div .text-box p {
-    font-size: 4rem; /* Increased font size for larger screens */
+    font-size: 4rem;
   }
 }
-
 .expertise-item h3,
 .expertise-item p {
   font-weight: bold;
 }
-
-/* Existing CSS code */
-
 .new-div {
   background-color: #fdf5e6;
   padding: 4rem;
   text-align: center;
 }
-
 h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
 }
-
 .project-details {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
-
 .text-box {
   flex: 1;
   text-align: left;
   padding: 2rem;
-  font-size: 2rem; /* Increased font size */
-  line-height: 1.5; /* Spacing between lines */
+  font-size: 2rem;
+  line-height: 1.5;
 }
-
 .image-box {
   flex: 0.5;
   display: flex;
   align-items: flex-start;
 }
-
 .image-box img {
   width: 100%;
   max-height: 100%;
   object-fit: cover;
 }
-
 h3 {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
 }
-
 .text-box h3 {
   background-color: rgb(194, 116, 129);
   padding: 0.5rem 1rem;
@@ -473,12 +385,10 @@ h3 {
   border-radius: 0.5rem;
   color: white;
 }
-
 p {
   font-size: 1.6rem;
   line-height: 1.6;
 }
-
 button {
   display: block;
   background-color: rgb(194, 116, 129);
@@ -492,7 +402,6 @@ button {
   border: 0.2rem solid #201f1c;
   font-weight: bold;
 }
-
 .text-box button {
   background-color: #fdf5e6;
   color: black;
@@ -500,157 +409,153 @@ button {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   cursor: pointer;
-  margin-top: 1rem; /* Move the button below the text */
+  margin-top: 1rem;
 }
-
 .text-box button {
-  margin-top: 1rem; /* Adjust the top margin to create space */
+  margin-top: 1rem;
 }
-
 .reverse-middle .project-details:nth-child(2) {
-  flex-direction: row-reverse; /* Reverse the order of flex items */
+  flex-direction: row-reverse;
 }
-
-/* Media query for larger screens */
 @media only screen and (min-width: 768px) {
   .text-box {
-    font-size: 2.5rem; /* Increase font size for larger screens */
+    font-size: 2.5rem;
   }
 }
-
 .image-box {
   width: 30%;
   padding: 2rem;
 }
-
 .image-box img {
   width: 100%;
   height: auto;
   border-radius: 0.5rem;
 }
-
 .container {
   display: flex;
   align-items: center;
   margin-top: 5rem;
 }
-
 .image-box {
   width: 30%;
   padding: 2rem;
 }
-
 .image-box img {
   max-width: 100%;
   height: auto;
 }
-
 .contact-info-container {
   background-color: #1f2d54;
   color: #fff;
-  padding: 2rem; /* Reduced padding for all screens */
+  padding: 2rem;
   border-radius: 1rem;
   width: 100%;
   margin: 0 auto;
 }
-
 .info-line:first-child {
-  justify-content: center; /* Center align the first line horizontally */
+  justify-content: center;
 }
-
 .info-line:nth-child(2) {
-  margin-left: 5%; /* Adjust the left margin as needed */
+  margin-left: 5%;
 }
-
 .icon {
-  margin-left: 10%; /* Adjust the margin to align with the second paragraph */
+  margin-left: 10%;
 }
-
 .contact-info {
   margin: 0 auto;
 }
-
 .info-line {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem; /* Add some space between lines */
+  margin-bottom: 1rem;
 }
-
 .info-text:first-child {
-  font-size: 3em; /* Increase font size for the first paragraph */
+  font-size: 5rem;
 }
-
-/* Media query for larger screens */
+.info-text:nth-child(2) {
+  font-size: 1.4rem;
+}
+.info-text:not(:first-child):not(:nth-child(2)) {
+  font-size: 1.6rem;
+}
 @media only screen and (min-width: 768px) {
   .contact-info-container {
-    padding: 3rem; /* Adjusted padding for larger screens */
+    padding: 3rem;
   }
-
   .info-line:nth-child(2) {
-    margin-left: 20%; /* Adjust the left margin for larger screens */
+    margin-left: 20%;
   }
-
   .icon {
-    margin-left: 25%; /* Adjust the margin for larger screens */
+    margin-left: 20%;
   }
-
   .info-text {
-    font-size: 2.4rem; /* Increased font size for larger screens */
+    font-size: 3rem;
   }
 }
-
-/* Media query for medium screens */
+@media only screen and (min-width: 768px) {
+  .contact-info-container {
+    padding: 3rem;
+  }
+  .info-line:nth-child(2) {
+    margin-left: 20%;
+  }
+  .icon {
+    margin-left: 20%;
+  }
+  .info-text {
+    font-size: 3rem;
+  }
+}
 @media only screen and (max-width: 767px) {
   .info-line:nth-child(2) {
-    margin-left: 5%; /* Adjust the left margin for medium screens */
+    margin-left: 5%;
   }
-
   .icon {
-    margin-left: 10%; /* Adjust the margin for medium screens */
+    margin-left: 10%;
   }
-
   .info-text {
-    font-size: 2rem; /* Reduced font size for medium screens */
+    font-size: 2rem;
   }
-
   .info-text:nth-child(2) {
-    white-space: nowrap; /* Ensure second line stays on one line */
+    white-space: nowrap;
   }
 }
-
-/* Media query for smaller screens */
 @media only screen and (max-width: 480px) {
   .contact-info-container {
-    padding: 2rem; /* Reduced padding for smaller screens */
+    padding: 2rem;
   }
-
   .info-line:nth-child(2) {
-    margin-left: 0; /* Remove left margin for smaller screens */
+    margin-left: 0;
   }
-
   .icon {
-    margin-left: 0; /* Remove left margin for smaller screens */
+    margin-left: 0;
   }
-
   .info-text {
-    font-size: 1.6rem; /* Reduced font size for smaller screens */
+    font-size: 1.6rem;
   }
 }
-.expertise-right .special {
-  font-family: 'Lexend Semibold';
-  font-size: 2rem; /* Adjust the font size as needed */
-  letter-spacing: 0.1em; /* Adjust the value as needed for the desired spacing */
+.contact-info-container .info-line:nth-child(2) .info-text {
+  font-size: 3rem;
 }
-
 .expertise-right p {
   font-family: 'Lexend ';
-  font-weight: normal; /* Set font weight to normal */
-  letter-spacing: 0.1em; /* Adjust letter spacing */
-  line-height: 1.5; /* Adjust line height for spacing between lines */
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
 }
 .info-text {
   font-family: 'Lexend', sans-serif;
 }
+.icon-container {
+  position: relative;
+}
+.icon {
+  margin-top: -1.5rem;
+}
+.container-three-boxes .box h3 {
+  white-space: nowrap;
+}
+
 
 
 
@@ -691,7 +596,7 @@ button {
           <img src="speaker-modified.png" alt="Icon 1">
         </div>
         <h3>Brand Solutions</h3>
-        <p>CCraft memorable brand
+        <p>Craft memorable brand
           experiences that resonate
           with your target audience
           and blend with your
@@ -769,7 +674,7 @@ button {
             <h3 style="font-family: 'Lexend Bold', sans-serif;">Decafe brew</h3>
             <p style="font-family: 'Lexend Light', sans-serif;">Savour the flavour of creativity. We brewed visiting cards, menus and packaging designs that leave a lasting impression with every sip.</p>
             <div class="button-container">
-                <button>get to know more</button>
+                <button>Get to know more</button>
             </div>
         </div>
         <div class="image-box">
