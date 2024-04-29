@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
+
   <title>Combined Layout</title>
   <style>
 html {
@@ -117,10 +119,17 @@ h2 {
 }
 
 .text-content h2 {
-  font-size: 3.5rem; /* Base font size for desktop */
-  font-family: "Lexend Bold", sans-serif; /* Set font family to Lexend Bold */
-  margin-bottom: 1rem; /* Add some space at the bottom */
+  font-size: 4rem;
+  font-family: 'Bebas Neue', sans-serif;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  padding-left: 1rem;
+  letter-spacing: 0.3rem; /* Increase letter spacing */
 }
+
+
+
+
 
 .right-content {
   flex: 1; /* Take up all available space */
@@ -627,6 +636,23 @@ button {
     font-size: 1.6rem; /* Reduced font size for smaller screens */
   }
 }
+.expertise-right .special {
+  font-family: 'Lexend Semibold';
+  font-size: 2rem; /* Adjust the font size as needed */
+  letter-spacing: 0.1em; /* Adjust the value as needed for the desired spacing */
+}
+
+.expertise-right p {
+  font-family: 'Lexend ';
+  font-weight: normal; /* Set font weight to normal */
+  letter-spacing: 0.1em; /* Adjust letter spacing */
+  line-height: 1.5; /* Adjust line height for spacing between lines */
+}
+.info-text {
+  font-family: 'Lexend', sans-serif;
+}
+
+
 
 
   </style>
@@ -706,7 +732,7 @@ button {
     
   </section>
   <div class="new-div">
-    <h2 style="font-family: 'Lexend Bold', sans-serif; font-size: 5rem;">See Our Projects</h2>
+    <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 5rem;">SEE OUR PROJECTS</h2>
     <div class="project-details">
 
         <div class="text-box">
@@ -760,12 +786,13 @@ button {
     <div class="contact-info">
       <div class="info-line">
         
-        <p class="info-text">READY TO SIP ON SUCCESS?</p>
+        <p class="info-text" style="font-family: 'Bebas Neue', sans-serif; font-weight: bold; letter-spacing: 0.2em;">READY TO SIP ON SUCCESS?</p>
+
       </div>
       <div class="info-line">
-      
         <p class="info-text">We accept telepathy but a text would work better. Contact us now!</p>
       </div>
+      
       <div class="info-line">
         <div class="icon">
           <img src="phone-removebg-preview.png" alt="Icon Description" style="width: 30px; height: auto;">
