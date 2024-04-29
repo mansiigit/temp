@@ -8,13 +8,27 @@
 html {
   font-size: 62.5%;
 }
-.yellow-div {
-  background-color:  #fdf5e6 !important; /* Add !important to override other styles */
+.top-left-icon {
+  position: absolute; /* Set position to absolute */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  padding: 0.5rem;
 }
+
+.top-left-icon img {
+  width: 8rem;
+  height: auto;
+}
+
+
+
+.yellow-div {
+  background-color: #fdf5e6 !important; /* Add !important to override other styles */
+}
+
 body {
   background-color: #fdf5e6; /* Set the background color to #fdf5e6 */
 }
-
 
 * {
   margin: 0;
@@ -32,9 +46,7 @@ body {
   padding: 0 2rem; /* Add horizontal padding */
 }
 
-.top-left-icon img {
-  max-width: 10vw; /* Adjust the maximum width as needed */
-}
+
 
 @media (max-width: 768px) {
   .text-content h2 {
@@ -64,8 +76,19 @@ body {
   }
 }
 
-.container {
+h2 {
+  font-size: 6em; /* Default font size for small screens */
+  line-height: 1.5; /* Increase line height for spacing between lines */
+}
 
+@media only screen and (min-width: 1024px) {
+  .yellow-div h2 {
+    font-size: 8em !important; /* Increase font size for larger screens (twice as big) */
+    margin-bottom: 2rem; /* Add more bottom margin for spacing */
+  }
+}
+
+.container {
   display: flex;
   flex-direction: column;
   align-items: center; /* Center align the child elements horizontally */
@@ -75,7 +98,6 @@ body {
 }
 
 .yellow-div {
-
   padding: 2rem;
   display: flex;
   justify-content: space-between; /* Distribute child elements evenly */
@@ -100,13 +122,27 @@ body {
   margin-bottom: 1rem; /* Add some space at the bottom */
 }
 
-.image {
-  width: 90%;
-  height: auto;
-  max-width: 100%;
-  object-fit: contain;
-  margin-left: -20%;
+.right-content {
+  flex: 1; /* Take up all available space */
 }
+
+.right-content .image {
+  width: 100%; /* Set the width to fill its container */
+  height: auto; /* Maintain aspect ratio */
+}
+@media (max-width: 768px) {
+  .right-content .image {
+    width: 130%; /* Increase the width to make the image even bigger */
+    max-width: none; /* Remove the maximum width restriction */
+    margin-top: -11rem; /* Move the image further upwards by adjusting the top margin */
+    margin-left: 1;
+  }
+}
+
+
+
+
+
 
 .button {
   background-color: #f9b116;
@@ -119,14 +155,7 @@ body {
   margin-top: 2rem;
 }
 
-.top-left-icon {
-  padding: 0.5rem;
-}
 
-.top-left-icon img {
-  width: 2rem;
-  height: auto;
-}
 
 .dark-blue-div {
   background-color: #1f2d54;
@@ -140,6 +169,7 @@ body {
   max-width: 20%;
   height: auto;
 }
+
 .new-div {
   background-color: #fdf5e6;
   padding: 4rem;
@@ -183,16 +213,11 @@ body {
   border-radius: 0.5rem;
   cursor: pointer;
 }
+
 .reverse-middle .project-details {
   flex-direction: row-reverse; /* Reverse the order of flex items */
 }
 
-
-.new-div {
-  background-color: #ccc;
-  padding: 4rem;
-  text-align: center;
-}
 .new-div h2 {
   font-size: 3.5rem; /* Adjust the font size as needed */
   font-family: 'Lexend Bold', sans-serif; /* Set the font family to Lexend Bold */
@@ -231,18 +256,6 @@ body {
   margin-right: 1rem; /* Add space after the last box */
 }
 
-.box .icon {
-  position: absolute;
-  top: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.box .icon img {
-  width: 20rem; /* Adjust the width of the icon */
-  height: auto; /* Maintain aspect ratio */
-}
-
 .box h3 {
   margin-top: 2rem;
   font-size: 3.5rem; /* Increase font size for larger screens */
@@ -254,6 +267,17 @@ body {
   font-size: 2.2rem; /* Increase font size for larger screens */
   line-height: 1.6;
   font-family: 'Lexend Light', sans-serif; /* Set font family for text */
+}
+
+.box .icon {
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.box .icon img {
+  width: 3rem; /* Decrease the width of the icon */
+  height: auto; /* Maintain aspect ratio */
 }
 
 @media (max-width: 1024px) {
@@ -271,14 +295,13 @@ body {
 
   .box .icon {
     top: -1rem; /* Adjust the position of the icon for smaller screens */
-    width: 4rem; /* Adjust the size of the icon for smaller screens */
+    width: 2rem; /* Decrease the size of the icon for smaller screens */
   }
 }
 
-@media (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   .box .icon img {
-    width: 20rem; /* Adjust the width of the icon for larger screens */
-    height: auto; /* Maintain aspect ratio */
+    width: 6rem; /* Increase the width of the icon for larger screens */
   }
 }
 
@@ -326,6 +349,7 @@ body {
   margin-left: 20%; /* Adjust margin as needed */
   color: white;
 }
+
 .expertise-right {
   font-size: 2rem; /* Increased font size */
   margin-right: 3rem; /* Move the text to the right */
@@ -356,6 +380,7 @@ body {
     font-size: 3.5rem; /* Increase font size for larger screens */
   }
 }
+
 .expertise-right {
   font-size: 1.6rem; /* Default font size */
 }
@@ -367,10 +392,10 @@ body {
   }
 }
 
-
 .expertise-item {
   margin-bottom: 4rem;
 }
+
 .new-div .text-box p {
   font-size: 1.8rem;
   line-height: 1.5;
@@ -383,26 +408,11 @@ body {
   }
 }
 
-
-
-
-.box .icon {
-  position: absolute;
-  top: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.box .icon img {
-  width: 3rem;
-  height: auto;
-}
-
 .expertise-item h3,
 .expertise-item p {
   font-weight: bold;
 }
- 
+
 /* Existing CSS code */
 
 .new-div {
@@ -593,7 +603,7 @@ button {
   .info-text {
     font-size: 2rem; /* Reduced font size for medium screens */
   }
-  
+
   .info-text:nth-child(2) {
     white-space: nowrap; /* Ensure second line stays on one line */
   }
@@ -601,60 +611,22 @@ button {
 
 /* Media query for smaller screens */
 @media only screen and (max-width: 480px) {
+  .contact-info-container {
+    padding: 2rem; /* Reduced padding for smaller screens */
+  }
+
   .info-line:nth-child(2) {
-    margin-left: 5%; /* Adjust the left margin for smaller screens */
+    margin-left: 0; /* Remove left margin for smaller screens */
   }
 
   .icon {
-    margin-left: 10%; /* Adjust the margin for smaller screens */
+    margin-left: 0; /* Remove left margin for smaller screens */
   }
 
   .info-text {
-    font-size: 1.5rem; /* Reduced font size for smaller screens */
-  }
-  
-  .info-text:nth-child(2) {
-    white-space: nowrap; /* Ensure second line stays on one line */
+    font-size: 1.6rem; /* Reduced font size for smaller screens */
   }
 }
-
-
-
-
-
-
-.top-left-icon {
-  position: absolute;
-  top: 1rem;
-  left: 0.5rem;
-  padding: 0.5rem;
-}
-
-.top-left-icon img {
-  width: 8rem;
-  height: auto;
-}
-.reverse-middle .project-details {
-  flex-direction: row-reverse; /* Reverse the order of flex items */
-}
-
-
-
-.info-line {
-  display: flex;
-  align-items: center;
-}
-
-.bigger-text {
-  font-size: 1.5em; /* Adjust the font size as needed */
-  margin: auto; /* Center the text horizontally */
-}
-
-.info-text {
-  margin-left: 6rem; /* Add left margin to the next line */
-}
-
-
 
 
   </style>
